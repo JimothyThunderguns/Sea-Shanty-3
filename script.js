@@ -70,7 +70,7 @@ $(document).ready(function () {
   
     // searches the API for the city
     function search() {
-      
+      //openweather api
       let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=42d98d76405f5b8038f2ad71187af430";
       let coords = [];
   
@@ -144,19 +144,19 @@ $(document).ready(function () {
           let icon3 = response.daily[3].weather[0].icon;
           let icon4 = response.daily[4].weather[0].icon;
           let icon5 = response.daily[5].weather[0].icon;
-          //
+          //prints the tempratures 
           $("#temp1").text("Temp(F):" + " " + day1temp.toFixed(1));
           $("#temp2").text("Temp(F):" + " " + day2temp.toFixed(1));
           $("#temp3").text("Temp(F):" + " " + day3temp.toFixed(1));
           $("#temp4").text("Temp(F):" + " " + day4temp.toFixed(1));
           $("#temp5").text("Temp(F):" + " " + day5temp.toFixed(1));
-  
+          //prints the humidity
           $("#hum1").text("Hum:" + " " + day1hum + "%");
           $("#hum2").text("Hum:" + " " + day2hum + "%");
           $("#hum3").text("Hum:" + " " + day3hum + "%");
           $("#hum4").text("Hum:" + " " + day4hum + "%");
           $("#hum5").text("Hum:" + " " + day5hum + "%");
-  
+          //prints the icons
           $("#icon1").html(
             `<img src="http://openweathermap.org/img/wn/${icon1}@2x.png">`
           );
