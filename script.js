@@ -1,3 +1,4 @@
+//Javascript stuff
 $(document).ready(function () {
 
 //Current Date Puller 
